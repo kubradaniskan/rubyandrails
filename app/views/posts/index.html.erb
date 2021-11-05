@@ -1,0 +1,17 @@
+<h1>Blog</h1>
+
+
+    <% @posts.each do |post| %>
+
+    <h2> <%= link_to post.title, post %> </h2>
+
+    <p>
+
+      <p> <%= time_ago_in_words post.created_at %> önce </p>
+
+  </p>
+  <hr/>
+
+     <% end %>
+       
+       <%= link_to "Yeni Yazı Ekle", new_post_path %>
